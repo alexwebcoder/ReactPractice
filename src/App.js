@@ -1,11 +1,9 @@
-import MainContent from "./components/MainContent/MainContent";
+import MainContent from "./components/MainContent/MainContent"
 
-function App() {
-  return (
-    <div className="App">
-      <MainContent />
-    </div>
-  );
+const App = () => {
+  return(
+    <MainContent />
+  )
 }
 
 export default App;
