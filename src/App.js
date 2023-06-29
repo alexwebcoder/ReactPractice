@@ -1,8 +1,13 @@
-import MainContent from "./components/MainContent/MainContent"
+import Main from "./components/Main/Main";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
   return(
-    <MainContent />
+    <div className="container">
+      <NavBar />
+      <Main />
+    </div>
+    
   )
 }
 

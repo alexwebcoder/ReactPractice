@@ -1,13 +1,73 @@
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  height: 100vh;
+  background-color: #303030;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+}
+
+.nav h1 {
+  color: #61DBFB;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 3px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nav img {
+  width: 27px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main {
+  padding: 15px 23px;
+}
+
+.main h1 {
+  font-weight: 700;
+}
+
+.main ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: -1rem;
+  position: relative;
+}
+
+.main ul li:before {
+  content: "\2022";
+  color: #61DBFB;
+  font-weight: 700;
+  width: 1rem;
+  display: inline-block;
+  padding-right: 6px;
+  font-size: 2rem;
+  position: relative;
+  top: 5px;
 }
