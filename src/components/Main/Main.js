@@ -1,17 +1,33 @@
-
-
 const Main = () => {
-    return (
-        <div className="main">  
-            <h1>Fun facts about React</h1>
-            <ul>
-                <li>Was first released in 2013</li>
-                <li>Was originally created by Jordan Walke</li>
-                <li>Has well over 100K stars on GitHub</li>
-                <li>Is maintained by Facebook</li>
-                <li>Powers thousands of enterprise apps, including <br/><span>mobile apps</span></li>
-            </ul>
+    return(
+        <>
+        
+        <div className="images">
+            <figure>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+            </figure>
+            <figure>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+            </figure>
+            <figure>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+            </figure>
+            <figure>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+            </figure>
+            <figure>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+                <img src="https://placehold.jp/150x150.png" alt="placeholder"/>
+            </figure>
         </div>
+        <section className="section">
+            <h2>Online Experiences</h2>
+            <p>Join unique interactive activities led by one-of-a-kind hosts--all without leaving home.</p>
+        </section>
+        </>
     )
 }
 
