@@ -7,75 +7,13 @@ body {
   font-family: 'Inter', sans-serif;;
 }
 
-.container {
-  height: 100vh;
-  background-color:  #282D35;
-  color: #fff;
-}
-
-.nav {
+nav {
+  height: 70px;
   display: flex;
-  background-color: #000;
-  color: #fff;
-  align-items: center;
-  gap: 5px;
-  padding: 15px 23px;
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
-.nav h1 {
-  color: #61DAFB;
-  margin-right: auto;
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-
-.nav ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  max-width: 400px;
-}
-
-.nav img {
-  width: 27px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.main {
-  padding: 15px 23px;
-  background:url('../public/react.png') no-repeat 134% 34%;
-  background-size: 41%;
-}
-
-.main h1 {
-  font-weight: 700;
-}
-
-.main ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-left: -1rem;
-  position: relative;
-}
-
-.main ul li:before {
-  content: "\2022";
-  color: #61DAFB;
-  font-weight: 700;
-  width: 1rem;
-  display: inline-block;
-  padding-right: 6px;
-  font-size: 2rem;
-  position: relative;
-  top: 5px;
-}
-
-.main ul span {
-  margin-left: 22px;
+nav img {
+  max-width: 138px;
 }
