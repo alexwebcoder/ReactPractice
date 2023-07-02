@@ -42,9 +42,19 @@ nav img {
   flex: 0 0 auto;         /* ADD */
   display: flex;          /* ADD */
   flex-direction: column; /* ADD */
+  position: relative;
 }
 
-.card figure:first-child {
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 48px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.card figure:first-of-type {
   height: 335px;
 }
 
@@ -74,4 +84,8 @@ nav img {
 /* ADD */
 .card-price {
   margin-top: auto;
+}
+
+.card p {
+  padding-left: 44px;
 }
