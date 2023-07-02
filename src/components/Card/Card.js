@@ -1,10 +1,11 @@
-const Card = () => {
+
+const Card = ({img, rating, reviewCount, location, title, price}) => {
     return (
-        <div className="card-container">
-            <figure><img src="https://placehold.jp/250x300.png" alt="image of whoever"/></figure>
-            <figure><img src="./star.png" alt="image of whoever" width="20px"/><figcaption>5.0 (6)-USA</figcaption></figure>
-            <p>Life lessons with Katie Zafdldkdlk</p>
-            <p><span>From $136</span>/ person</p>
+        <div className="card">
+            <figure><img className="card-image" src={`../images/${img}`} alt="image of whoever"/></figure>
+            <figure><img className="card-star" src="./star.png" alt="image of star" width="20px"/><figcaption className="gray">{rating} ({reviewCount})- {location}</figcaption></figure>
+            <p className="card-title">{title}</p>
+            <p className="card-price"><span className="bold">${price}</span>/ person</p>
         </div>
     )
 }
