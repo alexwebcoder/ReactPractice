@@ -1,21 +1,22 @@
 
-const Card = ({img, rating, reviewCount, location, title, price, key, openSpots}) => {
-    console.log({openSpots, key});
+const Card = ({item}) => {
+    // console.log({openSpots, key});
+    // console.log(props);
      
     let  badgeText;
-    if (openSpots === 0) {
-        badgeText = 'SOLD OUT'
-    } else if (location === 'Online') {
-        badgeText = 'ONLINE'
+    if (item.openSpots === 0) {
+        item.badgeText = 'SOLD OUT'
+    } else if (item.location === 'Online') {
+        item.badgeText = 'ONLINE'
     }
 
     return (
         <div className="card">
-            {badgeText && <div className="card-badge">{badgeText}</div>}
-            <figure><img className="card-image" src={`../images/${img}`} alt="image of whoever"/></figure>
-            <figure><img className="card-star" src="./star.png" alt="image of star" width="20px"/><figcaption className="gray">{rating} ({reviewCount})- {location}</figcaption></figure>
-            <p className="card-title">{title}</p>
-            <p className="card-price"><span className="bold">${price}</span>/ person</p>
+            {item.badgeText && <div className="card-badge">{item.badgeText}</div>}
+            <figure><img className="card-image" src={`../images/${item.coverImg}`} alt="image of whoever"/></figure>
+            <figure><img className="card-star" src="./star.png" alt="image of star" width="20px"/><figcaption className="gray">{item.stats.rating} ({item.stats.reviewCount})- {item.location}</figcaption></figure>
+            <p className="card-title">{item.title}</p>
+            <p className="card-price"><span className="bold">${item.price}</span>/ person</p>
         </div>
     )
 }
