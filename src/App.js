@@ -10,7 +10,7 @@ const App = () => {
      
         <Card 
           key={item.id}
-          item={item}
+          {...item}
         />
     )
   })

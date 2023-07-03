@@ -1,5 +1,5 @@
 
-const Card = ({item}) => {
+const Card = ({...item}) => {
     // console.log({openSpots, key});
     // console.log(props);
      
