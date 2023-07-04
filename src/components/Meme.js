@@ -1,13 +1,13 @@
 import memesData from "../memesData";
 
 const Meme = () => {
- 
-    const getRandomImage = () => {
-        const imageArray = memesData.data.memes;
-        const randomNumber = Math.floor(Math.random() * imageArray.length);
-        const url = imageArray[randomNumber].url;
-        console.log(url);
-    }
+ const getRandomImage = () => {
+     const imageArray = memesData.data.memes;
+     const randomNumber = Math.floor(Math.random() * imageArray.length);
+     const url = imageArray[randomNumber].url;
+     console.log(url);
+ }
+    
 
     
     return (
