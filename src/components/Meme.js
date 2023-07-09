@@ -2,14 +2,26 @@ import { useState } from "react";
 import memesData from "../memesData";
 
 const Meme = () => {
-    const [memeImage, setMemeImage] = useState('');
+    const [meme, setMeme] = useState({
+        topText: '',
+        bottomText: '',
+        randomImage: 'https://i.imgflip.com/9ehk.jpg'
+    });
 
-    const imageArray = memesData.data.memes;
-    const randomNumber = Math.floor(Math.random() * imageArray.length);
-    // const randomImage = imageArray[randomNumber].url;
+    const [allMemeImages, setAllMemeImages] = useState(memesData);
 
+    
     const getRandomImage =()=> {
-        setMemeImage( imageArray[randomNumber].url)
+        
+        const imageArray = allMemeImages.data.memes;
+        const randomNumber = Math.floor(Math.random() * imageArray.length);
+        const url = imageArray[randomNumber].url;
+        setMeme(prevMeme => ({
+          ...prevMeme,
+          randomImage: url
+
+        }));
+
     }
 
  const [isGoingOut, setIsGoingOut] = useState(true);
@@ -29,7 +41,7 @@ const Meme = () => {
                 </div>
             <button className="button" type="submit" onClick={getRandomImage}>Get a new meme image</button>
             </div>
-            <img className="memeImage" src={memeImage} alt="picture of a meme" />
+            <img className="memeImage" src={meme.randomImage} alt="picture of a meme" />
             <div onClick={changeMime} className="state--value">
                 <h1>{isGoingOut ? 'yes' : 'no'}</h1>
             </div>
