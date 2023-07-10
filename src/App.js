@@ -6,12 +6,12 @@ const App = () => {
 
 const [squares, setSquares] = useState(boxes);
 
-const toggle = () => {
-  console.log('clicked!')
+const toggle = (id) => {
+  console.log(id)
 }
 
 
-const boxElements = squares.map((square) => <Box key={square.id} on={square.on}  toggle={toggle}/>)
+const boxElements = squares.map((square) => <Box key={square.id} on={square.on}  toggle={toggle} id={square.id}/>)
 
   return (
       <h1>{boxElements}</h1>

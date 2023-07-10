@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Box = ({on, toggle}) => {  
+const Box = ({on, toggle, id}) => {  
     
     const styles = {
         
@@ -11,7 +11,13 @@ const Box = ({on, toggle}) => {
     
     
     return (
-        <div style={styles} className="square-parent" onClick={toggle}></div>
+        <div 
+        style={styles} 
+        className="square-parent" 
+        onClick={() => toggle(id)}
+        >
+
+        </div>
     )
 }
 
