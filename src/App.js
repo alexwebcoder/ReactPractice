@@ -1,31 +1,26 @@
-import Count from "./components/Count";
-import Header from "./components/Header";
 import { useState } from "react";
-// import Meme from "./components/Meme";
+import boxes from "./boxes"
 
-const App = () => {
+const App = ({darkMode}) => {
 
-  const [count, setCount] = useState(0);
-    
-    const add = () => {
-        setCount(prevCount => prevCount + 1);
-    }
-    const subtract = () => {
-        setCount(prevCount => prevCount - 1);
-    }
+const [squares, setSquares] = useState(boxes);
+console.log(squares.length)
+// props.darkMode;
+
+const styles = {
+  // backgroundColor: darkMode ? '#000' :  '#ccc'
+  backgroundColor: 'red'
   
-    console.log('App component rendered');
-    
-   return (
-    <>
-      <Header  img="troll.png"/>
-    <div className="container">
-        <button className="counter-minus" onClick={subtract}>-</button>
-      <Count number={count}/>
-      <button className="counter-plus" onClick={add}>+</button>
-    </div>
-    </>
-   )
+}
+
+squares.length % 2 === 0 ? styles.backgroundColor = 'yellow' : styles.backgroundColor = 'red'
+
+
+const boxElements = squares.map((square) => <div style={styles} className="square-parent" key={square.id}></div>)
+  return (
+      <h1>{boxElements}</h1>
+  )
+
 }
 
 export default App;
