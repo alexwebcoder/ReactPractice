@@ -1,23 +1,17 @@
 import { useState } from "react";
 
 
-const Box = ({on}) => {  
-
-    const [onOrOff, setOnOrOff] = useState(on);
-
+const Box = ({on, toggle}) => {  
     
     const styles = {
         
-        backgroundColor: onOrOff  ?  '#222' : 'transparent'
+        backgroundColor: on ?  '#222' : 'transparent'
         
     }
     
-    const handleState = () => {
-        setOnOrOff((prevState) => !prevState)
-    }
     
     return (
-        <div onClick={handleState} style={styles} className="square-parent"></div>
+        <div style={styles} className="square-parent" onClick={toggle}></div>
     )
 }
 
