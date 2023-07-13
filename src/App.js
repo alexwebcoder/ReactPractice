@@ -7,7 +7,11 @@ const App = () => {
 const [squares, setSquares] = useState(boxes);
 
 const toggle = (id) => {
-  console.log(id)
+ setSquares((prevSquares) => {
+  return prevSquares.map((square)=>{
+    return square.id === id ? {...square, on:!square.on} : square;
+  })
+ })
 }
 
 
