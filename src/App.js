@@ -1,12 +1,12 @@
 
-import Form from "./components/Form";
+import Meme from "./components/Meme";
 
 const App = () => {
 
 
 
   return (
-      <Form />
+    <Meme />
   )
 
 }
