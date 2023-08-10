@@ -40,37 +40,45 @@ useEffect(() => {
 console.log(allMemes)
     
     return (
-        <main>
-            <div className="form">
-                <input 
-                   type="text"
-                   placeholder="Top text"
-                   className="form-input"
-                   name="topText"
-                   value={meme.topText} 
-                   onChange={handleChange}
-                />
-                <input 
-                   type="text"
-                   placeholder="Bottom text"
-                   className="form-input"
-                   name="bottomText"
-                   value={meme.bottomText} 
-                   onChange={handleChange}
-                />
-                <button
-                   className="form-button"
-                   onClick={getMemeImage}
-                >
-                    Get a new meme image
-                </button>
-            </div>
-            <div className="meme">
-              <img src={meme.randomImage} className="meme-image"alt="a meme doing his thing" />
-              <h2 className="meme-top-text">{meme.topText}</h2>
-              <h2 className="meme-top-bottom">{meme.bottomText}</h2>
-            </div>
-        </main>
+
+        <section className="facts">
+           <h2>Facts about Panama</h2>
+           <div>
+           <img src={meme.randomImage} className="meme-image"alt="a meme doing his thing" />
+           </div>
+           <button  onClick={getMemeImage} >Learn a Fact</button>
+        </section>
+        // <main>
+        //     <div className="form">
+        //         <input 
+        //            type="text"
+        //            placeholder="Top text"
+        //            className="form-input"
+        //            name="topText"
+        //            value={meme.topText} 
+        //            onChange={handleChange}
+        //         />
+        //         <input 
+        //            type="text"
+        //            placeholder="Bottom text"
+        //            className="form-input"
+        //            name="bottomText"
+        //            value={meme.bottomText} 
+        //            onChange={handleChange}
+        //         />
+        //         <button
+        //            className="form-button"
+        //            onClick={getMemeImage}
+        //         >
+        //             Get a new meme image
+        //         </button>
+        //     </div>
+        //     <div className="meme">
+        //       <img src={meme.randomImage} className="meme-image"alt="a meme doing his thing" />
+        //       <h2 className="meme-top-text">{meme.topText}</h2>
+        //       <h2 className="meme-top-bottom">{meme.bottomText}</h2>
+        //     </div>
+        // </main>
     )
 }
 

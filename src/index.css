@@ -104,3 +104,16 @@ main {
 .top {
   top: 0;
 }
+
+.facts {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.facts div {
+  border: 1px solid #000;
+  border-radius: 5px;
+  /* height: 100px;s */
+  margin-bottom: 10px;
+}
